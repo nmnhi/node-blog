@@ -45,6 +45,6 @@ export const deleteBlog = async (id, userId) => {
     throw new Error("Not authorized to delete this blog");
   }
 
-  await blog.remove();
+  await Blog.deleteOne(blog);
   return { message: "Blog deleted successfully" };
 };
