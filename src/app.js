@@ -1,6 +1,8 @@
 import cors from "cors";
 import express from "express";
 import authRoutes from "./routes/auth.routes.js";
+import blogRoutes from "./routes/blog.route.js";
+import storageRoutes from "./routes/storage.routes.js";
 
 const app = express();
 
@@ -10,5 +12,7 @@ app.use(cors());
 
 // routes
 app.use("/api/auth", authRoutes);
+app.use("/api/blog", blogRoutes);
+app.use("/api/storage", storageRoutes);
 
 export default app;

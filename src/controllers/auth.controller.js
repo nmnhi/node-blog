@@ -50,6 +50,6 @@ export const getUsers = async (req, res) => {
     const users = await getAllUsers();
     res.status(200).json({ users });
   } catch (error) {
-    res.status(500).json({ error: "Server error" });
+    res.status(500).json({ error: "Internal server error" });
   }
 };
