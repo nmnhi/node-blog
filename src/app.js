@@ -11,7 +11,7 @@ app.use(express.json());
 // app.use(cors());
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://blog-frontend-two-gamma.vercel.app/"
+  "https://blog-frontend-two-gamma.vercel.app"
 ];
 
 app.use(
