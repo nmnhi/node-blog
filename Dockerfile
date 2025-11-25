@@ -1,12 +1,12 @@
 # Base image Node.js
-FROM node:18-alpine
+FROM node:20-alpine
 
 # Tạo thư mục làm việc
 WORKDIR /app
 
 # Copy package.json và cài dependencies
 COPY package*.json ./
-RUN npm install --production
+RUN npm install --omit=dev
 
 # Copy toàn bộ source code
 COPY . .
